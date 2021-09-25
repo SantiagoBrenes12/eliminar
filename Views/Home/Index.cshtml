@@ -1,0 +1,275 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProyectoWEB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@300;600;700;800;900&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header class="landing__page">
+        <nav class="nav">
+            <div class="nav__left">
+                <img src="img/Escudo CTP Oreamuno.png" alt="logo-ctpo" />
+                <div class="nav__links">
+                    <ul>
+                        <li><a href="">Inicio</a></li>
+                        <li><a href="#espe">Especialidades</a></li>
+                        <li><a href="#contact">Contáctanos</a></li>
+                        <li><a asp-controller="Home" asp-action="Formularioss">Más información</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="nav__right">
+                <ul>
+                    <li><a asp-area="Identity" asp-page="/Account/Register" >Registrarse</a></li>
+
+                    <li><a asp-area="Identity" asp-page="/Account/Login" class="btn_plan">Iniciar Sesión</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="landing__flex">
+                <div class="landing__left">
+                    <h1 class="landing__title">Conocé el mejor colegio de Cartago!</h1>
+                    <h3 style="font-weight:normal"><a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Bienvenid&#64 @User.Identity.Name!</a></h3>
+                 
+                </div>
+                <div class="landing__right"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main__page container">
+            <h2>Nuestros servicios</h2>
+            <div class="servicios">
+                <div class="servicios__card">
+                    <h3>Transporte</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="servicios__card">
+                    <h3>Comedor</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="servicios__card">
+                    <h3>Becas</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main__especialidades" id="espe">
+            <div class="container">
+                <h2 class="no-whitespace">Especialidades</h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat,
+                    vitae amet! Enim, ad minus. Voluptatem excepturi nemo, recusandae
+                    suscipit dolorem labore ipsum quod accusamus laudantium adipisci
+                    asperiores, libero totam repellat?
+                </p>
+                <div class="grid__especialidades">
+                    <div class="card__especialidades">
+                        <div class="card__img">
+                            <img src="img/Accounting.jpg" alt="" />
+                        </div>
+                        <div class="card__text">
+                            <h3>Accounting</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="card__btn">
+                            <a class="btn btn__esp" asp-controller="Especialidades" asp-action="Accounting">Más información</a>
+                        </div>
+                    </div>
+
+                    <div class="card__especialidades">
+                        <div class="card__img">
+                            <img src="img/Contabilidad.jpg" alt="" />
+                        </div>
+                        <div class="card__text">
+                            <h3>Contabilidad</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="card__btn">
+                            <a class="btn btn__esp" asp-controller="Especialidades" asp-action="Contabilidad">Más información</a>
+                        </div>
+                    </div>
+
+                    <div class="card__especialidades">
+                        <div class="card__img">
+                            <img src="img/Dibujo Arquite.jpg" alt="" />
+                        </div>
+                        <div class="card__text">
+                            <h3>Dibujo Arquitectónico</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="card__btn">
+                            <a class="btn btn__esp" asp-controller="Especialidades" asp-action="DibujoArquitectonico">Más información</a>
+                        </div>
+                    </div>
+
+                    <div class="card__especialidades">
+                        <div class="card__img">
+                            <img src="img/Electronica.jpg" alt="" />
+                        </div>
+                        <div class="card__text">
+                            <h3>Electrónica en telecomunicaciones</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="card__btn">
+                            <a class="btn btn__esp" asp-controller="Especialidades" asp-action="Electronica">Más información</a>
+                        </div>
+                    </div>
+                    <div class="card__especialidades">
+                        <div class="card__img">
+                            <img src="img/Logstica.jpg" alt="" />
+                        </div>
+                        <div class="card__text">
+                            <h3>Logística y Distribución</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="card__btn">
+                            <a class="btn btn__esp" asp-controller="Especialidades" asp-action="Administracion">Más información</a>
+                        </div>
+                    </div>
+                    <div class="card__especialidades">
+                        <div class="card__img">
+                            <img src="img/Productividad.jpg" alt="" />
+                        </div>
+                        <div class="card__text">
+                            <h3>Productividad y Calidad</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="card__btn">
+                            <a class="btn btn__esp" asp-controller="Especialidades" asp-action="ProductividadyCalidad">Más información</a>
+                        </div>
+                    </div>
+                    <div class="card__especialidades">
+                        <div class="card__img">
+                            <img src="img/Redes.jpg" alt="" />
+                        </div>
+                        <div class="card__text">
+                            <h3>Informática Empresarial</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="card__btn">
+                            <a class="btn btn__esp" asp-controller="Especialidades" asp-action="InfomaticaEmpresarial">Más información</a>
+                        </div>
+                    </div>
+                    <div class="card__especialidades">
+                        <div class="card__img">
+                            <img src="img/desarrollosoft.jpg" alt="" />
+                        </div>
+                        <div class="card__text">
+                            <h3>Desarrollo de Software</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="card__btn">
+                            <a class="btn btn__esp" asp-controller="Especialidades" asp-action="InformaticaDesarrollo">Más información</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact__page" id="contact">
+            <div class="container">
+                <h2 class="no-whitespace">Contactanos</h2>
+                <div class="contact__flex">
+                    <div class="contact__text">
+                        <h3>¿Necesitás más información?</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
+                            veniam corporis expedita at repellat ea magnam rerum amet minima
+                            quas inventore enim distinctio nesciunt consectetur vel fugit
+                            consequuntur eius tempore.
+                        </p>
+                        <div class="contact__redes">
+                            <a href="https://www.facebook.com/Colegio-T%C3%A9cnico-Profesional-de-Oreamuno-109822483797518/"
+                               target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                     class="icon icon-tabler icon-tabler-brand-facebook"
+                                     width="40"
+                                     height="40"
+                                     viewBox="0 0 24 24"
+                                     stroke-width="1.5"
+                                     stroke="#ffffff"
+                                     fill="none"
+                                     stroke-linecap="round"
+                                     stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/ctporeamuno/" target="_blank">
+
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                     class="icon icon-tabler icon-tabler-brand-instagram"
+                                     width="40"
+                                     height="40"
+                                     viewBox="0 0 24 24"
+                                     stroke-width="1.5"
+                                     stroke="#ffffff"
+                                     fill="none"
+                                     stroke-linecap="round"
+                                     stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <rect x="4" y="4" width="16" height="16" rx="4" />
+                                    <circle cx="12" cy="12" r="3" />
+                                    <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact__form">
+                        <div class="main__form">
+                            <form class="form">
+                                <h4 class="no-whitespace">Llená la información</h4>
+                                <label class="label__form" for="Nombre">Nombre</label>
+                                <input class="input__form" type="text" placeholder="Ingresa tu nombre">
+                                <label class="label__form" for="Correo">Correo</label>
+                                <input class="input__form" type="text" placeholder="Ingresa tu correo electrónico">
+                                <label class="label__form" for="Telefono">Teléfono</label>
+                                <input class="input__form" type="text" placeholder="Ingresa tu teléfono">
+                                <label class="label__form" for="Especialidad">Especialidad</label>
+                                <select id="Especialidad">
+                                    <option value=""></option>
+                                    <option value="">Informática en Desarrollo de Software</option>
+                                    <option value="">Electrónica en Telemunicaciones</option>
+                                    <option value="">Dibujo Arquitectónico</option>
+                                    <option value="">Administración Logística y Distribución</option>
+                                    <option value="">Contabilidad</option>
+                                    <option value="">Accouting</option>
+                                    <option value="">Productividad y Calidad</option>
+                                    <option value="">Informática Empresarial</option>
+                                </select>
+                                <button class="btn">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__flex">
+                    <div class="footer_text">
+                        <h3>Contacto</h3>
+                        <p>Tel: 2591 2973 / 2551 4409</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

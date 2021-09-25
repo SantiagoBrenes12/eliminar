@@ -1,0 +1,51 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<ul class="navbar-nav">
+    @if (SignInManager.IsSignedIn(User))
+    {
+     
+        <header class="landing__page">
+            <nav class="nav">
+                <div class="nav__left">
+                    <img src="img/Escudo CTP Oreamuno.png" alt="logo-ctpo" />
+                    <div class="nav__links">
+                        <ul>
+                            <li><a href="">Inicio</a></li>
+                            <li><a href="#espe">Especialidades</a></li>
+                            <li><a href="#contact">Contáctanos</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav__right">
+                    <ul>
+                        <li><a asp-area="Identity" asp-page="/Account/Register">Registrarse</a></li>
+
+                        <li><a asp-area="Identity" asp-page="/Account/Login" class="btn_plan">Iniciar Sesión</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container">
+                <div class="landing__flex">
+                    <div class="landing__left">
+                        <h1 class="landing__title">Conocé el mejor colegio de Cartago</h1>
+                        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Bienvenido @User.Identity.Name!</a>
+
+                    </div>
+                    <div class="landing__right"></div>
+                </div>
+            </div>
+        </header>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
+        </li>
+    }
+</ul>

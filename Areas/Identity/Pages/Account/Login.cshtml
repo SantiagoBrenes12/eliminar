@@ -1,0 +1,87 @@
+﻿@page
+@model LoginModel
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Inicio de Sesión</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@300;600;700;800;900&display=swap"
+              rel="stylesheet" />
+        <link rel="stylesheet" href="~/css/style.css" />
+        <link rel="stylesheet" href="~/css/normalize.css" />
+    </head>
+    <body style="
+      background: linear-gradient(
+        270deg,
+        rgba(74, 3, 156, 0.582) 0%,
+        rgba(114, 0, 190, 0.644) 50%,
+        rgba(169, 0, 247, 0.61) 100%
+      );
+    ">
+        <nav class="nav_l">
+            <div class="nav__left">
+                <img src="~/img/Escudo CTP Oreamuno.png" alt="logo-ctpo" />
+                <div class="nav__links">
+                    <ul>
+                        <li><a asp-controller="Home" asp-action="Index">Inicio</a></li>
+                        <li><a href="" style="color: transparent">Especialidades</a></li>
+                        <li><a href=""  style="color: transparent">Conocenos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav__right">
+                <ul>
+                    <li><a href="" class=""  style="color: transparent">Contáctanos</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div class="login__page">
+                <div class="login__content">
+                    <h1>Bienvenido</h1>
+                    <form id="account" method="post" class="form_login">
+                        <h2 class="no-whitespace">Iniciar Sesión</h2>
+                        <p class="no-whitespace">Inicia sesión para ver más información</p>
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="Input.Correo"></label>
+                            <input asp-for="Input.Correo" class="form-control" />
+                            <span asp-validation-for="Input.Correo" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Input.Contraseña"></label>
+                            <input asp-for="Input.Contraseña" class="form-control" />
+                            <span asp-validation-for="Input.Contraseña" class="text-danger"></span>
+                        </div>
+                        <button class="btn">Iniciar Sesión</button>
+                <p>
+                    <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">¿No tienes cuenta? <span class="spanlogin">Crea una</span></a>
+                </p>
+                </form>
+            </div>
+                <div class="login__img">
+                    <img src="~/img/undraw_Security_on_re_e491.svg" alt="" />
+                </div>
+            </div>
+        </main
+
+        @section Scripts {
+            <partial name="_ValidationScriptsPartial" />
+        }
+    </body>
+    </html>
+
+
+
+
+
+
+      
+            
+
+          
+ 
